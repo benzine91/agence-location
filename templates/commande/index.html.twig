@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+    <div class="bg-white p-4 shadow-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-11">
+                    <h1 class="h2">Vehicules index</h1>
+                </div>
+                <div class="col-1">
+                    <a href="{{ path('app_commande_new') }}" type="button" class=" btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ajouter une commande"><i class="bi bi-plus-lg"></i></a>
+                </div>
+            </div>   
+        </div>
+    </div>
+<div class="m-4 p-4"></div>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Montant</th>
+                <th>StartAt</th>
+                <th>CmdAt</th>
+                <th>CreateAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for commande in commandes %}
+            <tr>
+                <td>{{ commande.id }}</td>
+                <td>{{ commande.montant }}</td>
+                <td>{{ commande.startAt ? commande.startAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ commande.cmdAt ? commande.cmdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ commande.createAt ? commande.createAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_commande_show', {'id': commande.id}) }}">show</a>
+                    <a href="{{ path('app_commande_edit', {'id': commande.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

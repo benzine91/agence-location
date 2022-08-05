@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block h1 %}hhhh{% endblock %}
+{% block body %}
+<div class="p-3 m-3"></div>
+<div class="container">
+    <div class="row">
+
+        {% for vehicule in vehicules %}
+        <div class="col-3">
+        <div class="card" style="width: 18rem;">
+        <img src="{{asset('images/vehicule/'~ vehicule.image )}}" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+            <h5 class="card-title">{{ vehicule.titre }}</h5>
+            <p class="card-text text-danger">{{ vehicule.prix }}€ /j</p>
+            <a href="{{ path('app_commande_new', {'id': vehicule.id}) }}" class="btn btn-primary">Go somewhere</a>
+        </div>
+        </div>
+        </div>
+        {% else %}
+                            
+           <h5 class="card-title"> Pas de vehicule disponible</h5>
+                        
+        {% endfor %}
+
+    </div>
+</div>
+<div class="p-3 m-3"></div>
+
+{% endblock %}
+
+
+
+
+

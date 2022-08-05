@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+    {% block h1 %}Agence de location de voiture {% endblock %}
+
+    {% block stylesheets %}
+      <style>
+      p{
+        color: red;
+      }
+      </style>
+
+    {% endblock %}
+
+    {% block body %}
+    
+    <pre>
+        {{ dump(app.user)}}
+    </pre>
+    {% set test = 'kiwi' %}
+    
+    {% endblock %}

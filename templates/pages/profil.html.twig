@@ -1,0 +1,49 @@
+ {% extends "base.html.twig" %}
+  
+
+
+    {% block body %}
+    <div class="container">
+        <div class="m-3 p-3"></div>
+            <div class="card">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col fw-bold">Nom:</div>
+                                <div class="col">{{ app.user.nom|upper}}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col fw-bold">Prenom:</div>
+                                <div class="col">{{ app.user.prenom}}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col fw-bold">Email:</div>
+                                <div class="col">{{ app.user.email}}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col fw-bold">Role:</div>
+                                <div class="col"></div>
+                            </div>
+                        </li>
+
+
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col fw-bold">Inscrit le:</div>
+                                <div class="col">{{ app.user.createAt|date('d-m-Y') }}</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>                      
+        <div class="m-3 p-3"></div>
+    </div>
+    {% endblock %}

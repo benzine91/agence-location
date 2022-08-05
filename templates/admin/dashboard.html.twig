@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+
+
+
+
+
+{% block body %}
+    <div class="bg-white p-4 border-bottom shadow-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <h1 class="h2">{% block title %}Hello AdminController!{% endblock %}</h1>
+                </div>
+                <div class="col-2">
+                    <a href="{{ path('app_vehicule_index') }}" type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Allée a la list des Vehicules"><i class="bi bi-list-ul"></i></i></a>
+                
+                
+                    <a href="{{ path('app_vehicule_show_vehicule') }}" type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Allée a la list des Vehicules front-end"><i class="bi bi-list-ul"></i></i></a>
+                </div>
+            </div>   
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+
+
+
+       {{ form_start(form) }}
+        
+            <div class="card-body">
+            <div class="row">
+                <div class="col form-group py-2">
+                    <div>{{ form_label(form.startAt) }}</div>
+                    <div class="text-danger">{{ form_errors(form.startAt) }}</div>
+                    <div>{{ form_widget(form.startAt) }}</div>
+                </div>
+                <div class="col form-group py-2">
+                    <div>{{ form_label(form.cmdAt) }}</div>
+                    <div class="text-danger">{{ form_errors(form.cmdAt) }}</div>
+                    <div>{{ form_widget(form.cmdAt) }}</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col form-group py-2">
+                    <div>{{ form_label(form.User) }}</div>
+                    <div class="text-danger">{{ form_errors(form.User) }}</div>
+                    <div>{{ form_widget(form.User) }}</div>
+                </div>
+                <div class="col form-group py-2">
+                    <div>{{ form_label(form.vehicule) }}</div>
+                    <div class="text-danger">{{ form_errors(form.vehicule) }}</div>
+                    <div>{{ form_widget(form.vehicule) }}</div>
+                </div> 
+            </div>              
+             {{ form_end(form) }}
