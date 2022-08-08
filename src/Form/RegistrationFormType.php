@@ -47,20 +47,7 @@ class RegistrationFormType extends AbstractType
                 ],
             ])
         ;
-            if($options)
-            {
-                $builder
-                ->add('roles', ChoiceType::class, [
-                    'required' => false,
-                    'choice' => [
-                        'Admin' => 'ROLE_ADMIN',
-                    ],
-                    'multipl' => true,
-                    'expanded'  => true
 
-                    ]) 
-                ;      
-            }
         
     }
 
